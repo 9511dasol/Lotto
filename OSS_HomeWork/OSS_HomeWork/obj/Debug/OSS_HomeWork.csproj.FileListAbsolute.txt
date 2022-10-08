@@ -1,0 +1,11 @@
+D:\down\VS_C#\Visual_Studio-Workspace\OSS_HomeWork\OSS_HomeWork\bin\Debug\OSS_HomeWork.exe.config
+D:\down\VS_C#\Visual_Studio-Workspace\OSS_HomeWork\OSS_HomeWork\bin\Debug\OSS_HomeWork.exe
+D:\down\VS_C#\Visual_Studio-Workspace\OSS_HomeWork\OSS_HomeWork\bin\Debug\OSS_HomeWork.pdb
+D:\down\VS_C#\Visual_Studio-Workspace\OSS_HomeWork\OSS_HomeWork\obj\Debug\OSS_HomeWork.csproj.AssemblyReference.cache
+D:\down\VS_C#\Visual_Studio-Workspace\OSS_HomeWork\OSS_HomeWork\obj\Debug\OSS_HomeWork.csproj.SuggestedBindingRedirects.cache
+D:\down\VS_C#\Visual_Studio-Workspace\OSS_HomeWork\OSS_HomeWork\obj\Debug\OSS_HomeWork.Form1.resources
+D:\down\VS_C#\Visual_Studio-Workspace\OSS_HomeWork\OSS_HomeWork\obj\Debug\OSS_HomeWork.Properties.Resources.resources
+D:\down\VS_C#\Visual_Studio-Workspace\OSS_HomeWork\OSS_HomeWork\obj\Debug\OSS_HomeWork.csproj.GenerateResource.cache
+D:\down\VS_C#\Visual_Studio-Workspace\OSS_HomeWork\OSS_HomeWork\obj\Debug\OSS_HomeWork.csproj.CoreCompileInputs.cache
+D:\down\VS_C#\Visual_Studio-Workspace\OSS_HomeWork\OSS_HomeWork\obj\Debug\OSS_HomeWork.exe
+D:\down\VS_C#\Visual_Studio-Workspace\OSS_HomeWork\OSS_HomeWork\obj\Debug\OSS_HomeWork.pdb
