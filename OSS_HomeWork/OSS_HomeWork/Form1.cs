@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Net;
 using Newtonsoft.Json;
+using System.IO;
+
 
 namespace OSS_HomeWork
 {
@@ -32,18 +34,145 @@ namespace OSS_HomeWork
 
             if(!bch) return 0;
 
-            return 0;
+            return check;
         }
 
-        private string
-        private void label1_Click(object sender, EventArgs e)
+        private string GetLottoString(string strURI)
         {
-            
+            string strrspText = string.Empty;
+
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(strURI);
+            request.Method = "GET";
+
+            request.Timeout = 20 * 1000; // 20초
+            using(HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+            {
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    Stream resStream = response.GetResponseStream();
+                    using (StreamReader reader = new StreamReader(resStream))
+                    {
+                        strrspText = reader.ReadToEnd();
+                    }
+                }
+                else
+                {
+                    strrspText = "";
+                }
+            }
+            return strrspText;
+        }
+        private bool Ischeck()
+        {
+            if(IsNullString(textBox1.Text) && IsNullString(textBox2.Text) && IsNullString(textBox3.Text) &&
+                IsNullString(textBox4.Text) && IsNullString(textBox5.Text) && IsNullString(textBox6.Text))
+            {
+                MessageBox.Show("빈 값일 수는 없습니다.");
+                return false;
+            }
+            if(IsInt(textBox2.Text) == 0 && IsInt(textBox1.Text) == 0 && IsInt(textBox3.Text) == 0 &&
+                IsInt(textBox5.Text) == 0 && IsInt(textBox6.Text) == 0 && IsInt(textBox4.Text) == 0 )
+            {
+                MessageBox.Show("숫자만 입력해주세요.");
+                return false;
+            }
+
+            if(IsInt(textBox8.Text) == 0 && IsNullString(textBox8.Text))
+            {
+                MessageBox.Show("숫자만 입력하거나 빈 값일 수는 없습니다.");
+                textBox8.Text = "";
+                textBox8.Focus();
+                return false;
+            }
+            return true;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void CR(int INum)
         {
+            for(int i = 0; i < list.Count - 2; i++)
+            {
+                if(INum == list[i])
+                {
+                    count++;
+                    return;
+                }
+            }
+        }
 
+        private void MessageResult(int bonus)
+        {
+            switch(count)
+            {
+                case 6:
+                    {
+                        GB.Text = "축하합니다 1등입니다.";
+                        break;
+                    }
+                case 5:
+                    {
+                        if(bonus == 1)
+                        {
+                            GB.Text = "축하합니다 2등입니다.";
+                        }
+                        else
+                        {
+                            GB.Text = "축하합니다 3등입니다.";
+                        }
+                        break;
+                    }
+                case 4:
+                    {
+                        GB.Text = "축하합니다 4등입니다.";
+                        break;
+                    }
+                case 3:
+                    {
+                        GB.Text = "축하합니다 5등입니다.";
+                        break;
+                    }
+                default:
+                    {
+                        GB.Text = "꽝 ㅠㅠ";
+                        break;
+                    }
+            }
+        }
+
+ 
+
+   
+
+        private void Confirm_Click(object sender, EventArgs e)
+        {
+            List<int> Lotto_Num = new List<int>();
+            int bonus = 0;
+
+            list.Clear();
+            count = 0;
+
+            if (!Ischeck())
+            {
+                return;
+            }
+            Lotto_Num.Add(Convert.ToInt32(textBox1.Text.Trim()));
+            Lotto_Num.Add(Convert.ToInt32(textBox2.Text.Trim()));
+            Lotto_Num.Add(Convert.ToInt32(textBox3.Text.Trim()));
+            Lotto_Num.Add(Convert.ToInt32(textBox4.Text.Trim()));
+            Lotto_Num.Add(Convert.ToInt32(textBox5.Text.Trim()));
+            Lotto_Num.Add(Convert.ToInt32(textBox6.Text.Trim()));
+        }
+
+        private void round_Click(object sender, EventArgs e)
+        {
+            string strrv = GetLottoString("https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=" + textBox8.Text);
+
+            if(strrv == "")
+            {
+                MessageBox.Show("로또 홈페이지 접속 실패..");
+                return;
+            }
+
+            Jso
         }
     }
 }

@@ -28,49 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Confirm = new System.Windows.Forms.Button();
+            this.round = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.GB = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
-            // button3
+            // Confirm
             // 
-            this.button3.Font = new System.Drawing.Font("굴림", 15F);
-            this.button3.Location = new System.Drawing.Point(362, 233);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 36);
-            this.button3.TabIndex = 48;
-            this.button3.Text = "당첨확인";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Confirm.Font = new System.Drawing.Font("굴림", 15F);
+            this.Confirm.Location = new System.Drawing.Point(362, 233);
+            this.Confirm.Name = "Confirm";
+            this.Confirm.Size = new System.Drawing.Size(105, 36);
+            this.Confirm.TabIndex = 48;
+            this.Confirm.Text = "당첨확인";
+            this.Confirm.UseVisualStyleBackColor = true;
+            this.Confirm.Click += new System.EventHandler(this.Confirm_Click);
             // 
-            // button2
+            // round
             // 
-            this.button2.Font = new System.Drawing.Font("굴림", 15F);
-            this.button2.Location = new System.Drawing.Point(483, 131);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 36);
-            this.button2.TabIndex = 47;
-            this.button2.Text = "회차";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.round.Font = new System.Drawing.Font("굴림", 15F);
+            this.round.Location = new System.Drawing.Point(483, 131);
+            this.round.Name = "round";
+            this.round.Size = new System.Drawing.Size(88, 36);
+            this.round.TabIndex = 47;
+            this.round.Text = "회차";
+            this.round.UseVisualStyleBackColor = true;
+            this.round.Click += new System.EventHandler(this.round_Click);
             // 
             // label10
             // 
@@ -130,18 +130,10 @@
             this.textBox8.Size = new System.Drawing.Size(105, 30);
             this.textBox8.TabIndex = 41;
             // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("굴림", 15F);
-            this.textBox7.Location = new System.Drawing.Point(243, 82);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(68, 30);
-            this.textBox7.TabIndex = 40;
-            // 
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("굴림", 15F);
-            this.textBox5.Location = new System.Drawing.Point(330, 82);
+            this.textBox5.Location = new System.Drawing.Point(503, 76);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(68, 30);
             this.textBox5.TabIndex = 39;
@@ -149,7 +141,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("굴림", 15F);
-            this.textBox4.Location = new System.Drawing.Point(503, 82);
+            this.textBox4.Location = new System.Drawing.Point(415, 76);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(68, 30);
             this.textBox4.TabIndex = 38;
@@ -157,7 +149,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("굴림", 15F);
-            this.textBox3.Location = new System.Drawing.Point(415, 82);
+            this.textBox3.Location = new System.Drawing.Point(330, 76);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(68, 30);
             this.textBox3.TabIndex = 37;
@@ -165,7 +157,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("굴림", 15F);
-            this.textBox2.Location = new System.Drawing.Point(586, 82);
+            this.textBox2.Location = new System.Drawing.Point(243, 76);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(68, 30);
             this.textBox2.TabIndex = 36;
@@ -190,15 +182,6 @@
             this.label3.TabIndex = 34;
             this.label3.Text = "로또 번호";
             // 
-            // textBox
-            // 
-            this.textBox.Location = new System.Drawing.Point(27, 284);
-            this.textBox.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox.Multiline = true;
-            this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(747, 156);
-            this.textBox.TabIndex = 33;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -212,7 +195,7 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("굴림", 15F);
-            this.textBox6.Location = new System.Drawing.Point(160, 82);
+            this.textBox6.Location = new System.Drawing.Point(586, 76);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(68, 30);
             this.textBox6.TabIndex = 31;
@@ -230,7 +213,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("굴림", 15F);
-            this.textBox1.Location = new System.Drawing.Point(670, 83);
+            this.textBox1.Location = new System.Drawing.Point(160, 76);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(68, 30);
             this.textBox1.TabIndex = 49;
@@ -245,29 +228,36 @@
             this.label6.TabIndex = 50;
             this.label6.Text = "label6";
             // 
+            // GB
+            // 
+            this.GB.Location = new System.Drawing.Point(43, 278);
+            this.GB.Name = "GB";
+            this.GB.Size = new System.Drawing.Size(691, 113);
+            this.GB.TabIndex = 51;
+            this.GB.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.GB);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Confirm);
+            this.Controls.Add(this.round);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label1);
@@ -280,27 +270,26 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Confirm;
+        private System.Windows.Forms.Button round;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox GB;
     }
 }
 
