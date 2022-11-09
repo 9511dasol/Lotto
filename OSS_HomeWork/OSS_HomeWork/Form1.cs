@@ -38,7 +38,7 @@ namespace OSS_HomeWork
 
         private string GetLottoString(string strURI)
         {
-            var strrspText = string.Empty;
+            string strrspText = string.Empty;
 
             var request = (HttpWebRequest)WebRequest.Create(strURI);
             request.Method = "GET";
@@ -105,7 +105,7 @@ namespace OSS_HomeWork
                 case 6:
                     {
                         GB.Text = "축하합니다 1등입니다.\n";
-                        GB.Text = ""; // 당첨 금액 각각 추가하기
+                        //GB.Text = ""; // 당첨 금액 각각 추가하기
                         break;
                     }
                 case 5:
@@ -113,25 +113,25 @@ namespace OSS_HomeWork
                         if(bonus == 1)
                         {
                             GB.Text = "축하합니다 2등입니다.";
-                            GB.Text = "";
+                            //GB.Text = "";
                         }
                         else
                         {
                             GB.Text = "축하합니다 3등입니다.";
-                            GB.Text = "";
+                            //GB.Text = "";
                         }
                         break;
                     }
                 case 4:
                     {
                         GB.Text = "축하합니다 4등입니다.";
-                        GB.Text = "";
+                        //GB.Text = "";
                         break;
                     }
                 case 3:
                     {
                         GB.Text = "축하합니다 5등입니다.";
-                        GB.Text = "";
+                        //GB.Text = "";
                         break;
                     }
                 default:
@@ -171,7 +171,6 @@ namespace OSS_HomeWork
                 {
                     MessageBox.Show("로또 번호는 45를 넘길 수 없습니다.");
                 }
-
                 for (int z =1 + y; z < Lotto_Num.Count; z++)
                 {
                     if(Lotto_Num[y] == Lotto_Num[z])
