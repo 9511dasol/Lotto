@@ -38,7 +38,7 @@ namespace OSS_HomeWork
 
         private string GetLottoString(string strURI)
         {
-            string strrspText = string.Empty;
+            var strrspText = string.Empty;
 
             var request = (HttpWebRequest)WebRequest.Create(strURI);
             request.Method = "GET";
@@ -113,21 +113,25 @@ namespace OSS_HomeWork
                         if(bonus == 1)
                         {
                             GB.Text = "축하합니다 2등입니다.";
+                            GB.Text = "";
                         }
                         else
                         {
                             GB.Text = "축하합니다 3등입니다.";
+                            GB.Text = "";
                         }
                         break;
                     }
                 case 4:
                     {
                         GB.Text = "축하합니다 4등입니다.";
+                        GB.Text = "";
                         break;
                     }
                 case 3:
                     {
                         GB.Text = "축하합니다 5등입니다.";
+                        GB.Text = "";
                         break;
                     }
                 default:
@@ -160,22 +164,21 @@ namespace OSS_HomeWork
             Lotto_Num.Add(Convert.ToInt32(textBox4.Text.Trim()));
             Lotto_Num.Add(Convert.ToInt32(textBox5.Text.Trim()));
             Lotto_Num.Add(Convert.ToInt32(textBox6.Text.Trim()));
-            for(int x =0; x < Lotto_Num.Count; x++)
+            
+            for(int y = 0; y < Lotto_Num.Count; y++)
             {
-                if(Lotto_Num[x] > 45)
+                if (Lotto_Num[y] > 45)
                 {
                     MessageBox.Show("로또 번호는 45를 넘길 수 없습니다.");
                 }
-            }
-            for(int y = 0; y < Lotto_Num.Count; y++)
-            {
-                for(int z =1+y; z < Lotto_Num.Count; z++)
+
+                for (int z =1 + y; z < Lotto_Num.Count; z++)
                 {
                     if(Lotto_Num[y] == Lotto_Num[z])
                     {
-                        MessageBox.Show("같은 번호가 들어갈 수 없습니다.\n 다시 확인해주세요.");
+                        MessageBox.Show("같은 번호가 들어갈 수 없습니다.");
                         return;
-                    } // i 0 12345j1234
+                    } // i 0 12345 j1234
                 }
             }
             
