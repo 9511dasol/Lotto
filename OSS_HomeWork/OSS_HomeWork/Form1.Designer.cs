@@ -30,30 +30,32 @@
         {
             this.Confirm = new System.Windows.Forms.Button();
             this.round = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.Bonus = new System.Windows.Forms.Label();
+            this.F6 = new System.Windows.Forms.Label();
+            this.F5 = new System.Windows.Forms.Label();
+            this.F4 = new System.Windows.Forms.Label();
+            this.F2 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.F1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.F3 = new System.Windows.Forms.Label();
             this.GB = new System.Windows.Forms.GroupBox();
+            this.EXIT = new System.Windows.Forms.Button();
+            this.Bonus_num = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Confirm
             // 
             this.Confirm.Font = new System.Drawing.Font("굴림", 15F);
-            this.Confirm.Location = new System.Drawing.Point(362, 233);
+            this.Confirm.Location = new System.Drawing.Point(243, 236);
             this.Confirm.Name = "Confirm";
             this.Confirm.Size = new System.Drawing.Size(105, 36);
             this.Confirm.TabIndex = 48;
@@ -72,55 +74,55 @@
             this.round.UseVisualStyleBackColor = true;
             this.round.Click += new System.EventHandler(this.round_Click);
             // 
-            // label10
+            // Bonus
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("굴림", 15F);
-            this.label10.Location = new System.Drawing.Point(666, 193);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 20);
-            this.label10.TabIndex = 46;
-            this.label10.Text = "label10";
+            this.Bonus.AutoSize = true;
+            this.Bonus.Font = new System.Drawing.Font("굴림", 15F);
+            this.Bonus.Location = new System.Drawing.Point(666, 193);
+            this.Bonus.Name = "Bonus";
+            this.Bonus.Size = new System.Drawing.Size(49, 20);
+            this.Bonus.TabIndex = 46;
+            this.Bonus.Text = "____";
             // 
-            // label9
+            // F6
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("굴림", 15F);
-            this.label9.Location = new System.Drawing.Point(582, 193);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 20);
-            this.label9.TabIndex = 45;
-            this.label9.Text = "label9";
+            this.F6.AutoSize = true;
+            this.F6.Font = new System.Drawing.Font("굴림", 15F);
+            this.F6.Location = new System.Drawing.Point(582, 193);
+            this.F6.Name = "F6";
+            this.F6.Size = new System.Drawing.Size(59, 20);
+            this.F6.TabIndex = 45;
+            this.F6.Text = "_____";
             // 
-            // label8
+            // F5
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("굴림", 15F);
-            this.label8.Location = new System.Drawing.Point(499, 193);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 20);
-            this.label8.TabIndex = 44;
-            this.label8.Text = "label8";
+            this.F5.AutoSize = true;
+            this.F5.Font = new System.Drawing.Font("굴림", 15F);
+            this.F5.Location = new System.Drawing.Point(499, 193);
+            this.F5.Name = "F5";
+            this.F5.Size = new System.Drawing.Size(49, 20);
+            this.F5.TabIndex = 44;
+            this.F5.Text = "____";
             // 
-            // label7
+            // F4
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("굴림", 15F);
-            this.label7.Location = new System.Drawing.Point(411, 193);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 20);
-            this.label7.TabIndex = 43;
-            this.label7.Text = "label7";
+            this.F4.AutoSize = true;
+            this.F4.Font = new System.Drawing.Font("굴림", 15F);
+            this.F4.Location = new System.Drawing.Point(411, 193);
+            this.F4.Name = "F4";
+            this.F4.Size = new System.Drawing.Size(49, 20);
+            this.F4.TabIndex = 43;
+            this.F4.Text = "____";
             // 
-            // label5
+            // F2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("굴림", 15F);
-            this.label5.Location = new System.Drawing.Point(239, 193);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 20);
-            this.label5.TabIndex = 42;
-            this.label5.Text = "label5";
+            this.F2.AutoSize = true;
+            this.F2.Font = new System.Drawing.Font("굴림", 15F);
+            this.F2.Location = new System.Drawing.Point(239, 193);
+            this.F2.Name = "F2";
+            this.F2.Size = new System.Drawing.Size(59, 20);
+            this.F2.TabIndex = 42;
+            this.F2.Text = "_____";
             // 
             // textBox8
             // 
@@ -162,15 +164,15 @@
             this.textBox2.Size = new System.Drawing.Size(68, 30);
             this.textBox2.TabIndex = 36;
             // 
-            // label4
+            // F1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("굴림", 15F);
-            this.label4.Location = new System.Drawing.Point(171, 193);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 20);
-            this.label4.TabIndex = 35;
-            this.label4.Text = "label4";
+            this.F1.AutoSize = true;
+            this.F1.Font = new System.Drawing.Font("굴림", 15F);
+            this.F1.Location = new System.Drawing.Point(156, 193);
+            this.F1.Name = "F1";
+            this.F1.Size = new System.Drawing.Size(59, 20);
+            this.F1.TabIndex = 35;
+            this.F1.Text = "_____";
             // 
             // label3
             // 
@@ -218,15 +220,15 @@
             this.textBox1.Size = new System.Drawing.Size(68, 30);
             this.textBox1.TabIndex = 49;
             // 
-            // label6
+            // F3
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("굴림", 15F);
-            this.label6.Location = new System.Drawing.Point(326, 193);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 20);
-            this.label6.TabIndex = 50;
-            this.label6.Text = "label6";
+            this.F3.AutoSize = true;
+            this.F3.Font = new System.Drawing.Font("굴림", 15F);
+            this.F3.Location = new System.Drawing.Point(326, 193);
+            this.F3.Name = "F3";
+            this.F3.Size = new System.Drawing.Size(49, 20);
+            this.F3.TabIndex = 50;
+            this.F3.Text = "____";
             // 
             // GB
             // 
@@ -236,27 +238,50 @@
             this.GB.TabIndex = 51;
             this.GB.TabStop = false;
             // 
+            // EXIT
+            // 
+            this.EXIT.Font = new System.Drawing.Font("굴림", 15F);
+            this.EXIT.Location = new System.Drawing.Point(385, 236);
+            this.EXIT.Name = "EXIT";
+            this.EXIT.Size = new System.Drawing.Size(98, 36);
+            this.EXIT.TabIndex = 52;
+            this.EXIT.Text = "종료";
+            this.EXIT.UseVisualStyleBackColor = true;
+            this.EXIT.Click += new System.EventHandler(this.EXIT_Click);
+            // 
+            // Bonus_num
+            // 
+            this.Bonus_num.AutoSize = true;
+            this.Bonus_num.Font = new System.Drawing.Font("굴림", 11F);
+            this.Bonus_num.Location = new System.Drawing.Point(642, 167);
+            this.Bonus_num.Name = "Bonus_num";
+            this.Bonus_num.Size = new System.Drawing.Size(92, 15);
+            this.Bonus_num.TabIndex = 53;
+            this.Bonus_num.Text = "보너스번호: ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Bonus_num);
+            this.Controls.Add(this.EXIT);
             this.Controls.Add(this.GB);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.F3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Confirm);
             this.Controls.Add(this.round);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.Bonus);
+            this.Controls.Add(this.F6);
+            this.Controls.Add(this.F5);
+            this.Controls.Add(this.F4);
+            this.Controls.Add(this.F2);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.F1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox6);
@@ -272,24 +297,26 @@
 
         private System.Windows.Forms.Button Confirm;
         private System.Windows.Forms.Button round;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label Bonus;
+        private System.Windows.Forms.Label F6;
+        private System.Windows.Forms.Label F5;
+        private System.Windows.Forms.Label F4;
+        private System.Windows.Forms.Label F2;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label F1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label F3;
         private System.Windows.Forms.GroupBox GB;
+        private System.Windows.Forms.Button EXIT;
+        private System.Windows.Forms.Label Bonus_num;
     }
 }
 

@@ -7,9 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Net;
-using Newtonsoft.Json;
+using System.Net.Json;
 using System.IO;
-
 
 namespace OSS_HomeWork
 {
@@ -41,16 +40,16 @@ namespace OSS_HomeWork
         {
             string strrspText = string.Empty;
 
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(strURI);
+            var request = (HttpWebRequest)WebRequest.Create(strURI);
             request.Method = "GET";
 
             request.Timeout = 20 * 1000; // 20초
-            using(HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+            using(var response = (HttpWebResponse)request.GetResponse())
             {
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
                     Stream resStream = response.GetResponseStream();
-                    using (StreamReader reader = new StreamReader(resStream))
+                    using (var reader = new StreamReader(resStream))
                     {
                         strrspText = reader.ReadToEnd();
                     }
@@ -89,9 +88,9 @@ namespace OSS_HomeWork
 
         private void CR(int INum)
         {
-            for(int i = 0; i < list.Count - 2; i++)
+            for(int a = 0; a < list.Count - 1; a++)
             {
-                if(INum == list[i])
+                if(INum == list[a])
                 {
                     count++;
                     return;
@@ -105,7 +104,8 @@ namespace OSS_HomeWork
             {
                 case 6:
                     {
-                        GB.Text = "축하합니다 1등입니다.";
+                        GB.Text = "축하합니다 1등입니다.\n";
+                        GB.Text = ""; // 당첨 금액 각각 추가하기
                         break;
                     }
                 case 5:
@@ -147,7 +147,7 @@ namespace OSS_HomeWork
             List<int> Lotto_Num = new List<int>();
             int bonus = 0;
 
-            list.Clear();
+            
             count = 0;
 
             if (!Ischeck())
@@ -160,6 +160,35 @@ namespace OSS_HomeWork
             Lotto_Num.Add(Convert.ToInt32(textBox4.Text.Trim()));
             Lotto_Num.Add(Convert.ToInt32(textBox5.Text.Trim()));
             Lotto_Num.Add(Convert.ToInt32(textBox6.Text.Trim()));
+            for(int x =0; x < Lotto_Num.Count; x++)
+            {
+                if(Lotto_Num[x] > 45)
+                {
+                    MessageBox.Show("로또 번호는 45를 넘길 수 없습니다.");
+                }
+            }
+            for(int y = 0; y < Lotto_Num.Count; y++)
+            {
+                for(int z =1+y; z < Lotto_Num.Count; z++)
+                {
+                    if(Lotto_Num[y] == Lotto_Num[z])
+                    {
+                        MessageBox.Show("같은 번호가 들어갈 수 없습니다.\n 다시 확인해주세요.");
+                        return;
+                    } // i 0 12345j1234
+                }
+            }
+            
+            for(int i = 0; i < Lotto_Num.Count ; i++)
+            {
+                CR(Lotto_Num[i]);
+                if (Lotto_Num[i] == list[list.Count-1])
+                {
+                    bonus = 1;
+                }
+            }
+            MessageResult(bonus);
+
         }
 
         private void round_Click(object sender, EventArgs e)
@@ -172,7 +201,39 @@ namespace OSS_HomeWork
                 return;
             }
 
-            Jso
+            var parser = new JsonTextParser();
+            JsonObject OB = parser.Parse(strrv);
+            var OBC = (JsonObjectCollection)OB;
+
+            list.Clear();
+
+            if (OBC["returnValue"].GetValue().ToString() == "success")
+            {
+                F1.Text = OBC["drwtNo1"].GetValue().ToString();
+                F2.Text = OBC["drwtNo2"].GetValue().ToString();
+                F3.Text = OBC["drwtNo3"].GetValue().ToString();
+                F4.Text = OBC["drwtNo4"].GetValue().ToString();
+                F5.Text = OBC["drwtNo5"].GetValue().ToString();
+                F6.Text = OBC["drwtNo6"].GetValue().ToString();
+                Bonus.Text = OBC["bnusNo"].GetValue().ToString();
+
+                list.Add(Convert.ToInt32(OBC["drwtNo1"].GetValue().ToString().Trim()));
+                list.Add(Convert.ToInt32(OBC["drwtNo2"].GetValue().ToString().Trim()));
+                list.Add(Convert.ToInt32(OBC["drwtNo3"].GetValue().ToString().Trim()));
+                list.Add(Convert.ToInt32(OBC["drwtNo4"].GetValue().ToString().Trim()));
+                list.Add(Convert.ToInt32(OBC["drwtNo5"].GetValue().ToString().Trim()));
+                list.Add(Convert.ToInt32(OBC["drwtNo6"].GetValue().ToString().Trim()));
+                list.Add(Convert.ToInt32(OBC["bnusNo"].GetValue().ToString().Trim()));
+            }
+
+
+
+        }
+
+        private void EXIT_Click(object sender, EventArgs e)
+        {
+            Close();
+            
         }
     }
 }

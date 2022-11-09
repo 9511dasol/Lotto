@@ -20,3 +20,7 @@ D:\data\my_project\OSS_HomeWork\OSS_HomeWork\obj\Debug\OSS_HomeWork.csproj.Gener
 D:\data\my_project\OSS_HomeWork\OSS_HomeWork\obj\Debug\OSS_HomeWork.csproj.CoreCompileInputs.cache
 D:\data\my_project\OSS_HomeWork\OSS_HomeWork\obj\Debug\OSS_HomeWork.exe
 D:\data\my_project\OSS_HomeWork\OSS_HomeWork\obj\Debug\OSS_HomeWork.pdb
+D:\data\my_project\OSS_HomeWork\OSS_HomeWork\bin\Debug\Newtonsoft.Json.dll
+D:\data\my_project\OSS_HomeWork\OSS_HomeWork\bin\Debug\System.Net.Json.dll
+D:\data\my_project\OSS_HomeWork\OSS_HomeWork\bin\Debug\Newtonsoft.Json.xml
+D:\data\my_project\OSS_HomeWork\OSS_HomeWork\obj\Debug\OSS_HomeWork.csproj.CopyComplete
