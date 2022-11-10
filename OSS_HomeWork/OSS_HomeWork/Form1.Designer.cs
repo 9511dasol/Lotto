@@ -234,7 +234,7 @@
             // 
             this.GB.Location = new System.Drawing.Point(43, 278);
             this.GB.Name = "GB";
-            this.GB.Size = new System.Drawing.Size(691, 113);
+            this.GB.Size = new System.Drawing.Size(691, 134);
             this.GB.TabIndex = 51;
             this.GB.TabStop = false;
             // 

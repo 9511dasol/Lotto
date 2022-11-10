@@ -80,15 +80,31 @@ namespace OSS_HomeWork
             {
                 MessageBox.Show("숫자만 입력하거나 빈 값일 수는 없습니다.");
                 textBox8.Text = "";
-                textBox8.Focus();
                 return false;
             }
             return true;
         }
+        private bool IscheckForRound()
+        {
+            if (IsNullString(textBox8.Text))
+            {
+                MessageBox.Show("빈 값일 수는 없습니다.");
+                textBox8.Text = "";
+                return false;
+            }
 
+            if (IsInt(textBox8.Text) == 0)
+            {
+                MessageBox.Show("0이상의 정수만 입력하세요.");
+                textBox8.Text = "";
+                return false;
+            }
+            
+            return true;
+        }
         private void CR(int INum)
         {
-            for(int a = 0; a < list.Count - 1; a++)
+            for(int a = 0; a < list.Count; a++)
             {
                 if(INum == list[a])
                 {
@@ -202,7 +218,10 @@ namespace OSS_HomeWork
                 MessageBox.Show("로또 홈페이지 접속 실패..");
                 return;
             }
-
+            if(!IscheckForRound())
+            {
+                return;
+            }
             var parser = new JsonTextParser();
             JsonObject OB = parser.Parse(strrv);
             var OBC = (JsonObjectCollection)OB;
