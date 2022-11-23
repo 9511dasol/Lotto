@@ -296,7 +296,7 @@ namespace OSS_HomeWork
                 }
             }
             Array.Sort(lot);
-            MessageBox.Show($"{lot[0]} {lot[1]} {lot[2]} {lot[3]} {lot[4]} {lot[5]}", "로또 번호");
+            GB.Text = $"{lot[0]} {lot[1]} {lot[2]} {lot[3]} {lot[4]} {lot[5]}";
             return;
         }
     }
