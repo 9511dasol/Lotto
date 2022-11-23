@@ -16,6 +16,9 @@ namespace OSS_HomeWork
     {
         int count = 0;
         List<int> list = new List<int>();
+        Random random = new Random();
+        public int[] lot = new int[6];
+
         public Form1()
         {
             InitializeComponent();
@@ -35,7 +38,17 @@ namespace OSS_HomeWork
 
             return check;
         }
+        private int getCurrentRound()
+        {
+            var nowDt = DateTime.Now;
+            var firstround = new DateTime(2002, 12, 07); // 1회차
 
+            TimeSpan ts = nowDt.Subtract(firstround);
+            var diffDay = ts.Days;
+
+            var current_round = diffDay / 7;
+            return current_round;
+        }
         private string GetLottoString(string strURI)
         {
             string strrspText = string.Empty;
@@ -88,7 +101,7 @@ namespace OSS_HomeWork
         {
             if (IsNullString(textBox8.Text))
             {
-                MessageBox.Show("빈 값일 수는 없습니다.");
+                MessageBox.Show("회차는 빈 값일 수는 없습니다.");
                 textBox8.Text = "";
                 return false;
             }
@@ -104,7 +117,7 @@ namespace OSS_HomeWork
         }
         private void CR(int INum)
         {
-            for(int a = 0; a < list.Count; a++)
+            for(int a = 0; a < list.Count - 1; a++)
             {
                 if(INum == list[a])
                 {
@@ -205,6 +218,7 @@ namespace OSS_HomeWork
                     bonus = 1;
                 }
             }
+            //MessageBox.Show($"{bonus}");
             MessageResult(bonus);
 
         }
@@ -225,7 +239,12 @@ namespace OSS_HomeWork
             var parser = new JsonTextParser();
             JsonObject OB = parser.Parse(strrv);
             var OBC = (JsonObjectCollection)OB;
-
+            
+            if(Convert.ToInt32(textBox8.Text) > getCurrentRound() + 1)
+            {
+                MessageBox.Show($"최근 진행된 회차는 {getCurrentRound() + 1} 입니다.");
+                return;
+            }
             list.Clear();
 
             if (OBC["returnValue"].GetValue().ToString() == "success")
@@ -255,6 +274,30 @@ namespace OSS_HomeWork
         {
             Close();
             
+        }
+
+        private void Make_Lotto_num_Click(object sender, EventArgs e)
+        {
+            int n = 0;
+            for (int i = 0; i < 6; i++)
+            {
+                lot[i] = -1;
+            }
+            for (int i = 0; i < 6; i++)
+            {
+                while (true)
+                {
+                    n = random.Next(1, 46);
+                    if (!lot.Contains(n))
+                    {
+                        lot[i] = n;
+                        break;
+                    }
+                }
+            }
+            Array.Sort(lot);
+            MessageBox.Show($"{lot[0]} {lot[1]} {lot[2]} {lot[3]} {lot[4]} {lot[5]}", "로또 번호");
+            return;
         }
     }
 }

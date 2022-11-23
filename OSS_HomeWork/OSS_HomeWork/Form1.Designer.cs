@@ -50,12 +50,13 @@
             this.GB = new System.Windows.Forms.GroupBox();
             this.EXIT = new System.Windows.Forms.Button();
             this.Bonus_num = new System.Windows.Forms.Label();
+            this.Make_Lotto_num = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Confirm
             // 
             this.Confirm.Font = new System.Drawing.Font("굴림", 15F);
-            this.Confirm.Location = new System.Drawing.Point(243, 236);
+            this.Confirm.Location = new System.Drawing.Point(330, 236);
             this.Confirm.Name = "Confirm";
             this.Confirm.Size = new System.Drawing.Size(105, 36);
             this.Confirm.TabIndex = 48;
@@ -241,7 +242,7 @@
             // EXIT
             // 
             this.EXIT.Font = new System.Drawing.Font("굴림", 15F);
-            this.EXIT.Location = new System.Drawing.Point(385, 236);
+            this.EXIT.Location = new System.Drawing.Point(451, 236);
             this.EXIT.Name = "EXIT";
             this.EXIT.Size = new System.Drawing.Size(98, 36);
             this.EXIT.TabIndex = 52;
@@ -259,11 +260,23 @@
             this.Bonus_num.TabIndex = 53;
             this.Bonus_num.Text = "보너스번호: ";
             // 
+            // Make_Lotto_num
+            // 
+            this.Make_Lotto_num.Font = new System.Drawing.Font("굴림", 15F);
+            this.Make_Lotto_num.Location = new System.Drawing.Point(206, 239);
+            this.Make_Lotto_num.Name = "Make_Lotto_num";
+            this.Make_Lotto_num.Size = new System.Drawing.Size(105, 33);
+            this.Make_Lotto_num.TabIndex = 54;
+            this.Make_Lotto_num.Text = "번호 생성";
+            this.Make_Lotto_num.UseVisualStyleBackColor = true;
+            this.Make_Lotto_num.Click += new System.EventHandler(this.Make_Lotto_num_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Make_Lotto_num);
             this.Controls.Add(this.Bonus_num);
             this.Controls.Add(this.EXIT);
             this.Controls.Add(this.GB);
@@ -317,6 +330,7 @@
         private System.Windows.Forms.GroupBox GB;
         private System.Windows.Forms.Button EXIT;
         private System.Windows.Forms.Label Bonus_num;
+        private System.Windows.Forms.Button Make_Lotto_num;
     }
 }
 
