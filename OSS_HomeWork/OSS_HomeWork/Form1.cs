@@ -79,19 +79,19 @@ namespace OSS_HomeWork
             if(IsNullString(textBox1.Text) && IsNullString(textBox2.Text) && IsNullString(textBox3.Text) &&
                 IsNullString(textBox4.Text) && IsNullString(textBox5.Text) && IsNullString(textBox6.Text))
             {
-                MessageBox.Show("빈 값일 수는 없습니다.");
+                MessageBox.Show("빈 값일 수는 없습니다.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if(IsInt(textBox2.Text) == 0 && IsInt(textBox1.Text) == 0 && IsInt(textBox3.Text) == 0 &&
                 IsInt(textBox5.Text) == 0 && IsInt(textBox6.Text) == 0 && IsInt(textBox4.Text) == 0 )
             {
-                MessageBox.Show("숫자만 입력해주세요.");
+                MessageBox.Show("숫자만 입력해주세요.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             if(IsInt(textBox8.Text) == 0 && IsNullString(textBox8.Text))
             {
-                MessageBox.Show("숫자만 입력하거나 빈 값일 수는 없습니다.");
+                MessageBox.Show("숫자만 입력하거나 빈 값일 수는 없습니다.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 textBox8.Text = "";
                 return false;
             }
@@ -101,14 +101,14 @@ namespace OSS_HomeWork
         {
             if (IsNullString(textBox8.Text))
             {
-                MessageBox.Show("회차는 빈 값일 수는 없습니다.");
+                MessageBox.Show("회차는 빈 값일 수는 없습니다.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 textBox8.Text = "";
                 return false;
             }
 
             if (IsInt(textBox8.Text) == 0)
             {
-                MessageBox.Show("0이상의 정수만 입력하세요.");
+                MessageBox.Show("0이상의 정수만 입력하세요.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 textBox8.Text = "";
                 return false;
             }
@@ -133,7 +133,7 @@ namespace OSS_HomeWork
             {
                 case 6:
                     {
-                        GB.Text = "축하합니다 1등입니다.\n";
+                        GB.Text = "축하합니다 1등입니다.";
                         //GB.Text = ""; // 당첨 금액 각각 추가하기
                         break;
                     }
@@ -170,11 +170,10 @@ namespace OSS_HomeWork
                     }
             }
         }
-
- 
-
-   
-
+        public static bool IsConnectedToInternet()
+        {
+            return System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable();
+        }
         private void Confirm_Click(object sender, EventArgs e)
         {
             List<int> Lotto_Num = new List<int>();
@@ -198,7 +197,7 @@ namespace OSS_HomeWork
             {
                 if (Lotto_Num[y] > 45)
                 {
-                    MessageBox.Show("로또 번호는 45를 넘길 수 없습니다.");
+                    MessageBox.Show("로또 번호는 45를 넘길 수 없습니다.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     GB.Text = "";
                     return;
 
@@ -207,7 +206,7 @@ namespace OSS_HomeWork
                 {
                     if(Lotto_Num[y] == Lotto_Num[z])
                     {
-                        MessageBox.Show("같은 번호가 들어갈 수 없습니다.");
+                        MessageBox.Show("같은 번호가 들어갈 수 없습니다.", "Warning", MessageBoxButtons.OK ,MessageBoxIcon.Warning);
                         GB.Text = "";
                         return;
                     } // i 0 12345 j1234
@@ -231,9 +230,14 @@ namespace OSS_HomeWork
         {
             string strrv = GetLottoString("https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=" + textBox8.Text);
 
+            if(!IsConnectedToInternet())
+            {
+                MessageBox.Show("인터넷 연결 실패..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if(strrv == "")
             {
-                MessageBox.Show("로또 홈페이지 접속 실패..");
+                MessageBox.Show("로또 홈페이지 접속 실패..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if(!IscheckForRound())
@@ -246,7 +250,7 @@ namespace OSS_HomeWork
             
             if(Convert.ToInt32(textBox8.Text) > getCurrentRound() + 1)
             {
-                MessageBox.Show($"최근 진행된 회차는 {getCurrentRound() + 1} 입니다.");
+                MessageBox.Show($"최근 진행된 회차는 {getCurrentRound() + 1} 입니다." , "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             list.Clear();
