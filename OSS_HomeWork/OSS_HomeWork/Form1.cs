@@ -18,7 +18,7 @@ namespace OSS_HomeWork
         List<int> list = new List<int>();
         Random random = new Random();
         public int[] lot = new int[6];
-
+        
         public Form1()
         {
             InitializeComponent();
@@ -199,12 +199,16 @@ namespace OSS_HomeWork
                 if (Lotto_Num[y] > 45)
                 {
                     MessageBox.Show("로또 번호는 45를 넘길 수 없습니다.");
+                    GB.Text = "";
+                    return;
+
                 }
                 for (int z =1 + y; z < Lotto_Num.Count; z++)
                 {
                     if(Lotto_Num[y] == Lotto_Num[z])
                     {
                         MessageBox.Show("같은 번호가 들어갈 수 없습니다.");
+                        GB.Text = "";
                         return;
                     } // i 0 12345 j1234
                 }
