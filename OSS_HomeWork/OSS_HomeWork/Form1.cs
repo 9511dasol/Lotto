@@ -235,11 +235,7 @@ namespace OSS_HomeWork
                 MessageBox.Show("인터넷 연결 실패..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if(strrv == "")
-            {
-                MessageBox.Show("로또 홈페이지 접속 실패..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            
             if(!IscheckForRound())
             {
                 return;
