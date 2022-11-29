@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Confirm = new System.Windows.Forms.Button();
             this.round = new System.Windows.Forms.Button();
             this.Bonus = new System.Windows.Forms.Label();
@@ -299,6 +300,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "로또번휴맞추기";
             this.ResumeLayout(false);
