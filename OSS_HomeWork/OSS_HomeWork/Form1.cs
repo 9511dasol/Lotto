@@ -76,20 +76,20 @@ namespace OSS_HomeWork
         }
         private bool Ischeck()
         {
-            if(IsNullString(textBox1.Text) && IsNullString(textBox2.Text) && IsNullString(textBox3.Text) &&
-                IsNullString(textBox4.Text) && IsNullString(textBox5.Text) && IsNullString(textBox6.Text))
+            if(IsNullString(textBox1.Text) || IsNullString(textBox2.Text) || IsNullString(textBox3.Text) ||
+                IsNullString(textBox4.Text) || IsNullString(textBox5.Text) || IsNullString(textBox6.Text))
             {
                 MessageBox.Show("빈 값일 수는 없습니다.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if(IsInt(textBox2.Text) == 0 && IsInt(textBox1.Text) == 0 && IsInt(textBox3.Text) == 0 &&
-                IsInt(textBox5.Text) == 0 && IsInt(textBox6.Text) == 0 && IsInt(textBox4.Text) == 0 )
+            if(IsInt(textBox2.Text) == 0 || IsInt(textBox1.Text) == 0 || IsInt(textBox3.Text) == 0 ||
+                IsInt(textBox5.Text) == 0 || IsInt(textBox6.Text) == 0 || IsInt(textBox4.Text) == 0 )
             {
                 MessageBox.Show("숫자만 입력해주세요.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
-            if(IsInt(textBox8.Text) == 0 && IsNullString(textBox8.Text))
+            if(IsInt(textBox8.Text) == 0 || IsNullString(textBox8.Text))
             {
                 MessageBox.Show("숫자만 입력하거나 빈 값일 수는 없습니다.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 textBox8.Text = "";

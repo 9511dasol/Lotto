@@ -1,0 +1,15 @@
+D:\data\my_project\OSS_HomeWork\OSS_HomeWork\bin\Release\OSS_HomeWork.exe.config
+D:\data\my_project\OSS_HomeWork\OSS_HomeWork\bin\Release\OSS_HomeWork.exe
+D:\data\my_project\OSS_HomeWork\OSS_HomeWork\bin\Release\OSS_HomeWork.pdb
+D:\data\my_project\OSS_HomeWork\OSS_HomeWork\bin\Release\Newtonsoft.Json.dll
+D:\data\my_project\OSS_HomeWork\OSS_HomeWork\bin\Release\System.Net.Json.dll
+D:\data\my_project\OSS_HomeWork\OSS_HomeWork\bin\Release\Newtonsoft.Json.xml
+D:\data\my_project\OSS_HomeWork\OSS_HomeWork\obj\Release\OSS_HomeWork.csproj.AssemblyReference.cache
+D:\data\my_project\OSS_HomeWork\OSS_HomeWork\obj\Release\OSS_HomeWork.csproj.SuggestedBindingRedirects.cache
+D:\data\my_project\OSS_HomeWork\OSS_HomeWork\obj\Release\OSS_HomeWork.Form1.resources
+D:\data\my_project\OSS_HomeWork\OSS_HomeWork\obj\Release\OSS_HomeWork.Properties.Resources.resources
+D:\data\my_project\OSS_HomeWork\OSS_HomeWork\obj\Release\OSS_HomeWork.csproj.GenerateResource.cache
+D:\data\my_project\OSS_HomeWork\OSS_HomeWork\obj\Release\OSS_HomeWork.csproj.CoreCompileInputs.cache
+D:\data\my_project\OSS_HomeWork\OSS_HomeWork\obj\Release\OSS_HomeWork.csproj.CopyComplete
+D:\data\my_project\OSS_HomeWork\OSS_HomeWork\obj\Release\OSS_HomeWork.exe
+D:\data\my_project\OSS_HomeWork\OSS_HomeWork\obj\Release\OSS_HomeWork.pdb
