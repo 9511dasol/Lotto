@@ -6,6 +6,8 @@
 
 ![lotto](https://github.com/user-attachments/assets/6938ad91-be02-4303-9d73-aeab670c691d)
 
+- 실행 파일: OSS_HomeWork.exe
+
 ## 개발 기간 ⏱️
 22.10.26 - 22.12.05
 
